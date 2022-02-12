@@ -224,3 +224,30 @@ struct diccionariStruct {
 let newDict = diccionariStruct()
 print(newDict.key)
 print(diccionario["key"])
+
+var conjunto = [1, 2, 3]
+
+// Para declarar un array
+var conjunto2: [Int] = [1, 2, 3]
+
+// Para declarar un diccionario
+var conjunto3: [String: Any]
+
+// Logica para any, trata de evitar porque tendrías que hacer este tipo de validaciones
+var xyz: Any = "Hola"
+//
+//if let _ : Int = Int(xyz)  {
+//    print("1")
+//}
+
+if (xyz as? Int) != nil {
+    print("Si es un #")
+} else {
+    print("No es un #")
+}
+
+// A la hora de poner el tipo valores Int, Struct, u otros objetos hace más eficiente la compilación.
+
+// Siempre que se pueda usar un struct en vez de una clase es mejor para que sea más eficiente, pero hay que tener cuidado de cuando si es necesario usar una clase porque si no puede morir la app.
+
+
