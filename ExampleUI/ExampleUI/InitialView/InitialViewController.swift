@@ -8,10 +8,6 @@
 import UIKit
 
 class InitialViewController: UIViewController {
-    
-//    override class func load() {
-//
-//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,16 +29,9 @@ class InitialViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
     }
-
-    
-    deinit {
-        
-    }
-    
     
     @IBAction func goToSecondView(_ sender: Any) {
-        let viewControllerWithCode = ViewWithCodeViewController()
-//        present(viewControllerWithCode, animated: true, completion: nil)
+        let viewControllerWithCode = CollectionViewController(nibName: "CollectionViewController", bundle: nil)
         navigationController?.pushViewController(viewControllerWithCode, animated: true)
     }
 }

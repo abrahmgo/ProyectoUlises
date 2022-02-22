@@ -26,6 +26,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    
     // investigar que funcion de app delegate, te avisa, cuando muere/crashea, cuando es interrumpiada, y las funciones cuando la minimizas y regresas a la app, 
 }
