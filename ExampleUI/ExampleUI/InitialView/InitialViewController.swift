@@ -12,6 +12,8 @@ class InitialViewController: UIViewController {
 //    override class func load() {
 //
 //    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,3 +48,5 @@ class InitialViewController: UIViewController {
         navigationController?.pushViewController(viewControllerWithCode, animated: true)
     }
 }
+
+
