@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C04148E27CDE084007A1861 /* SecondCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04148C27CDE084007A1861 /* SecondCollectionViewCell.swift */; };
+		3C04148F27CDE084007A1861 /* SecondCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C04148D27CDE084007A1861 /* SecondCollectionViewCell.xib */; };
 		B6D88BDC27BDF9EC00B9C984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D88BDB27BDF9EC00B9C984 /* AppDelegate.swift */; };
 		B6D88BE527BDF9ED00B9C984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6D88BE427BDF9ED00B9C984 /* Assets.xcassets */; };
 		B6D88BE827BDF9ED00B9C984 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D88BE627BDF9ED00B9C984 /* LaunchScreen.storyboard */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C04148C27CDE084007A1861 /* SecondCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCollectionViewCell.swift; sourceTree = "<group>"; };
+		3C04148D27CDE084007A1861 /* SecondCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondCollectionViewCell.xib; sourceTree = "<group>"; };
 		B6D88BD827BDF9EC00B9C984 /* ExampleUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D88BDB27BDF9EC00B9C984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6D88BE427BDF9ED00B9C984 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				B6F6A64827C495A000FCFCDB /* TitleCollectionViewCell.swift */,
+				3C04148C27CDE084007A1861 /* SecondCollectionViewCell.swift */,
+				3C04148D27CDE084007A1861 /* SecondCollectionViewCell.xib */,
 				B6F6A64927C495A000FCFCDB /* TitleCollectionViewCell.xib */,
 			);
 			path = Cells;
@@ -280,6 +286,7 @@
 			files = (
 				B6F6A64B27C495A000FCFCDB /* TitleCollectionViewCell.xib in Resources */,
 				B6F6A64427C4909800FCFCDB /* CollectionViewController.xib in Resources */,
+				3C04148F27CDE084007A1861 /* SecondCollectionViewCell.xib in Resources */,
 				B6D88BE827BDF9ED00B9C984 /* LaunchScreen.storyboard in Resources */,
 				B6D88BE527BDF9ED00B9C984 /* Assets.xcassets in Resources */,
 				B6D88C0F27BDFC0E00B9C984 /* InitialViewController.xib in Resources */,
@@ -307,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C04148E27CDE084007A1861 /* SecondCollectionViewCell.swift in Sources */,
 				B6F6A64627C4941800FCFCDB /* CollectionViewDataSource.swift in Sources */,
 				B6F6A64327C4909800FCFCDB /* CollectionViewController.swift in Sources */,
 				B6D88C1227BDFE3B00B9C984 /* ViewWithCodeViewController.swift in Sources */,

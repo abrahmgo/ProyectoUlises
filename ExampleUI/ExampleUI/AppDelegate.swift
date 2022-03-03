@@ -54,7 +54,7 @@ func applicationWillEnterForeground(_: UIApplication){
 //    Tells the delegate that the app is about to enter the foreground.
 
 func applicationWillTerminate(_: UIApplication){
-    print("application will terminate")
+    print("Application will terminate")
 }
 
 }

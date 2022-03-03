@@ -15,6 +15,9 @@ class CollectionViewController: UIViewController {
             collectionView.delegate = self
             collectionView.register(UINib(nibName: "TitleCollectionViewCell", bundle: nil),
                                     forCellWithReuseIdentifier: "TitleCollectionViewCell")
+            
+            collectionView.register(UINib(nibName: "SecondCollectionViewCell", bundle: nil),
+                                    forCellWithReuseIdentifier: "SecondCollectionViewCell")
         }
     }
     
