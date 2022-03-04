@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class InitialViewController: UIViewController {
 
@@ -16,6 +17,35 @@ class InitialViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+//        MainUserDefaults.volume = 50
+//        MainUserDefaults.isSplash = true
+//        let volumeStatus = MainUserDefaults.volume
+//        print(volumeStatus)
+        
+        // obtener la tabla
+        let context = CoreData.shared.persistentContainer.viewContext
+        // obtener el objeto a guardar
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
+        // creamos el objeto a guardar
+        let newUser = NSManagedObject(entity: entity!, insertInto: context)
+
+        // insertamos
+        newUser.setValue("Test", forKey: "name")
+        newUser.setValue(1, forKey: "id")
+        newUser.setValue("Perez", forKey: "lastName")
+        newUser.setValue(34, forKey: "age")
+
+        // guardamos
+        CoreData.shared.saveContext()
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            // obtenemos
+            CoreData.shared.getContext(entity: "User")
+            // eliminar
+//            CoreData.shared.deleteContext(entity: "User")
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

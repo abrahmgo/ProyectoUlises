@@ -24,6 +24,9 @@
 		B6F6A64627C4941800FCFCDB /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F6A64527C4941800FCFCDB /* CollectionViewDataSource.swift */; };
 		B6F6A64A27C495A000FCFCDB /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F6A64827C495A000FCFCDB /* TitleCollectionViewCell.swift */; };
 		B6F6A64B27C495A000FCFCDB /* TitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6F6A64927C495A000FCFCDB /* TitleCollectionViewCell.xib */; };
+		B6FCA27C27D06F9C00AC9C5D /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCA27B27D06F9C00AC9C5D /* UserDefaults.swift */; };
+		B6FCA28027D0762C00AC9C5D /* User.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6FCA27E27D0762C00AC9C5D /* User.xcdatamodeld */; };
+		B6FCA28227D0772300AC9C5D /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCA28127D0772300AC9C5D /* CoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		B6F6A64527C4941800FCFCDB /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		B6F6A64827C495A000FCFCDB /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6F6A64927C495A000FCFCDB /* TitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCollectionViewCell.xib; sourceTree = "<group>"; };
+		B6FCA27B27D06F9C00AC9C5D /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		B6FCA27F27D0762C00AC9C5D /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
+		B6FCA28127D0772300AC9C5D /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		BFDD76D6B7EDC05DEFB9295C /* Pods_ExampleUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDABAAFEB2A36CBF30AFF5D7 /* Pods-ExampleUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleUI.debug.xcconfig"; path = "Target Support Files/Pods-ExampleUI/Pods-ExampleUI.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +159,7 @@
 		B6D88BDA27BDF9EC00B9C984 /* ExampleUI */ = {
 			isa = PBXGroup;
 			children = (
+				B6FCA27A27D06F8600AC9C5D /* DataPersistent */,
 				B6F6A64027C4907D00FCFCDB /* CollectionView */,
 				B6D88C1027BDFE0700B9C984 /* ViewWithCode */,
 				B6D88C0B27BDFBD000B9C984 /* InitialView */,
@@ -216,6 +223,24 @@
 				B6F6A64927C495A000FCFCDB /* TitleCollectionViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		B6FCA27A27D06F8600AC9C5D /* DataPersistent */ = {
+			isa = PBXGroup;
+			children = (
+				B6FCA27D27D0747300AC9C5D /* CoreData */,
+				B6FCA27B27D06F9C00AC9C5D /* UserDefaults.swift */,
+			);
+			path = DataPersistent;
+			sourceTree = "<group>";
+		};
+		B6FCA27D27D0747300AC9C5D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B6FCA27E27D0762C00AC9C5D /* User.xcdatamodeld */,
+				B6FCA28127D0772300AC9C5D /* CoreData.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,11 +421,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6FCA28027D0762C00AC9C5D /* User.xcdatamodeld in Sources */,
 				B6F6A64627C4941800FCFCDB /* CollectionViewDataSource.swift in Sources */,
 				B6F6A64327C4909800FCFCDB /* CollectionViewController.swift in Sources */,
 				B6D88C1227BDFE3B00B9C984 /* ViewWithCodeViewController.swift in Sources */,
+				B6FCA28227D0772300AC9C5D /* CoreData.swift in Sources */,
 				B6F6A64A27C495A000FCFCDB /* TitleCollectionViewCell.swift in Sources */,
 				B6D88C0E27BDFC0E00B9C984 /* InitialViewController.swift in Sources */,
+				B6FCA27C27D06F9C00AC9C5D /* UserDefaults.swift in Sources */,
 				B6D88BDC27BDF9EC00B9C984 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -735,6 +763,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B6FCA27E27D0762C00AC9C5D /* User.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B6FCA27F27D0762C00AC9C5D /* User.xcdatamodel */,
+			);
+			currentVersion = B6FCA27F27D0762C00AC9C5D /* User.xcdatamodel */;
+			path = User.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B6D88BD027BDF9EC00B9C984 /* Project object */;
 }
