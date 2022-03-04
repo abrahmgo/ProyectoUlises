@@ -16,7 +16,7 @@ extension CollectionViewController: UICollectionViewDataSource {
     }
     // Número de celdas por sección. For default es sólo una sección
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 20
+        //        return 20
         if section == 0 {
             return 1
         } else {
@@ -27,47 +27,43 @@ extension CollectionViewController: UICollectionViewDataSource {
     // celda
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TitleCollectionViewCell",
-                                                            for: indexPath) as? TitleCollectionViewCell else {
-            
-            return UICollectionViewCell()
-        }
         
-        guard let cellTwo = collectionView.dequeueReusableCell(withReuseIdentifier: "SecondCollectionViewCell",
-                                                            for: indexPath) as? SecondCollectionViewCell else {
-            
-            return UICollectionViewCell()
-        }
-
-        
-//        if indexPath.row < 10 {
-//            cell.update(text: "Hola esta es una celda", color: .blue)
-//        } else {
-//            cell.update(text: "Adios es es una celda", color: .blue)
-//        }
+        //        if indexPath.row < 10 {
+        //            cell.update(text: "Hola esta es una celda", color: .blue)
+        //        } else {
+        //            cell.update(text: "Adios es es una celda", color: .blue)
+        //        }
         
         
         // Estas validando la sección
         if indexPath.section == 0 {
-            cellTwo.update(text: "Esta es la seccion 1", color: .purple)
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TitleCollectionViewCell",
+                                                                for: indexPath) as? TitleCollectionViewCell else {
+                
+                return UICollectionViewCell()
+            }
             
-            return cellTwo
+            cell.update(text: "Esta es la seccion 1", color: .purple)
+            
+            return cell
             
         } else {
+            
+            guard let cellTwo = collectionView.dequeueReusableCell(withReuseIdentifier: "SecondCollectionViewCell",
+                                                                   for: indexPath) as? SecondCollectionViewCell else {
+                
+                return UICollectionViewCell()
+            }
             // estas validando las celdas
-//          cell.update(text: "Esta es la seccion 2", color: .blue)
+            //          cell.update(text: "Esta es la seccion 2", color: .blue)
             if indexPath.row % 2 == 0 {
-                        cellTwo.update(text: "Hola, esta es una celda", color: .blue)
-                    } else {
-                        cellTwo.update(text: "Adiós, es es una celda", color: .blue)
-                    }
+                cellTwo.update(text: "Hola, esta es una celda", color: .blue)
+            } else {
+                cellTwo.update(text: "Adiós, es es una celda", color: .blue)
+            }
             return cellTwo
-
         }
     }
-    
-    
-
 }
 
 /*
@@ -78,7 +74,7 @@ extension CollectionViewController: UICollectionViewDataSource {
  4. Investgar if indexPath.row % 2 == 0
  
  Mínimo una celda nueva.
-
+ 
  Agragar la celda y ten cuidado con el return cell, se añade uno.
  
  
