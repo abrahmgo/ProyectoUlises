@@ -24,28 +24,31 @@ class InitialViewController: UIViewController {
 //        print(volumeStatus)
         
         // obtener la tabla
-        let context = CoreData.shared.persistentContainer.viewContext
+//        let context = CoreData.shared.persistentContainer.viewContext
         // obtener el objeto a guardar
-        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
+//        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
         // creamos el objeto a guardar
-        let newUser = NSManagedObject(entity: entity!, insertInto: context)
+//        let newUser = NSManagedObject(entity: entity!, insertInto: context)
 
         // insertamos
-        newUser.setValue("Test", forKey: "name")
-        newUser.setValue(1, forKey: "id")
-        newUser.setValue("Perez", forKey: "lastName")
-        newUser.setValue(34, forKey: "age")
+//        newUser.setValue("Test", forKey: "name")
+//        newUser.setValue(1, forKey: "id")
+//        newUser.setValue("Perez", forKey: "lastName")
+//        newUser.setValue(34, forKey: "age")
 
         // guardamos
-        CoreData.shared.saveContext()
+//        CoreData.shared.saveContext()
         
+        // realm
+        let stores = MainRealm.shared.read(object: Furniture.self)
+        print(stores)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             // obtenemos
-            CoreData.shared.getContext(entity: "User")
+//            CoreData.shared.getContext(entity: "User")
             // eliminar
 //            CoreData.shared.deleteContext(entity: "User")
-        }
+//        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

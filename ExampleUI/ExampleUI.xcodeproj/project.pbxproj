@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15DD56F54CBCA9FB6EFECEF4 /* Pods_ExampleUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFDD76D6B7EDC05DEFB9295C /* Pods_ExampleUI.framework */; };
+		B66955C827D7019D004545E1 /* MainRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66955C727D7019D004545E1 /* MainRealm.swift */; };
 		B686C7F327C7387B00ECE445 /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B686C7F227C7387B00ECE445 /* Components.framework */; };
 		B686C7F427C7387B00ECE445 /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B686C7F227C7387B00ECE445 /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B6D88BDC27BDF9EC00B9C984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D88BDB27BDF9EC00B9C984 /* AppDelegate.swift */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		615D01198EEA812032D0DDB9 /* Pods-ExampleUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleUI.release.xcconfig"; path = "Target Support Files/Pods-ExampleUI/Pods-ExampleUI.release.xcconfig"; sourceTree = "<group>"; };
+		B66955C727D7019D004545E1 /* MainRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRealm.swift; sourceTree = "<group>"; };
 		B686C7F227C7387B00ECE445 /* Components.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Components.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D88BD827BDF9EC00B9C984 /* ExampleUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D88BDB27BDF9EC00B9C984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,14 @@
 			);
 			name = Pods;
 			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		B66955C627D70075004545E1 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				B66955C727D7019D004545E1 /* MainRealm.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		B686C7F127C7387B00ECE445 /* Frameworks */ = {
@@ -228,6 +238,7 @@
 		B6FCA27A27D06F8600AC9C5D /* DataPersistent */ = {
 			isa = PBXGroup;
 			children = (
+				B66955C627D70075004545E1 /* Realm */,
 				B6FCA27D27D0747300AC9C5D /* CoreData */,
 				B6FCA27B27D06F9C00AC9C5D /* UserDefaults.swift */,
 			);
@@ -421,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B66955C827D7019D004545E1 /* MainRealm.swift in Sources */,
 				B6FCA28027D0762C00AC9C5D /* User.xcdatamodeld in Sources */,
 				B6F6A64627C4941800FCFCDB /* CollectionViewDataSource.swift in Sources */,
 				B6F6A64327C4909800FCFCDB /* CollectionViewController.swift in Sources */,

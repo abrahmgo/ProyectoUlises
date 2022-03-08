@@ -11,4 +11,5 @@ target 'ExampleUI' do
   project 'ExampleUI/ExampleUI'
   
   pod 'Alamofire'
+  pod 'RealmSwift'
 end
