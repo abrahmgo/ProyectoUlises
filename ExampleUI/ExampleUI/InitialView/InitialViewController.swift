@@ -10,6 +10,9 @@ import CoreData
 
 class InitialViewController: UIViewController {
 
+    let notifications = ModuleNotificationCenter()
+    
+    @IBOutlet weak var lblTitle: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -17,6 +20,13 @@ class InitialViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        notifications.registerNotification()
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(customNotification(_:)),
+                                               name: NSNotification.Name("toco celda"),
+                                               object: nil)
         
 //        MainUserDefaults.volume = 50
 //        MainUserDefaults.isSplash = true
@@ -51,8 +61,22 @@ class InitialViewController: UIViewController {
 //        }
     }
     
+    @objc func customNotification(_ notification: Notification?) {
+        print("initial view controller")
+        print("toco celda")
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+//        let closures = Closures()
+//        closures.doLogin(user: "correo@gfdg.com") { statusLogin in
+//            if statusLogin {
+//                self.lblTitle.text = "Login exitoso"
+//            } else {
+//                self.lblTitle.text = "Intenta de nuevo"
+//            }
+//        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

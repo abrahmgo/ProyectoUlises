@@ -11,6 +11,8 @@
 		B66955C827D7019D004545E1 /* MainRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66955C727D7019D004545E1 /* MainRealm.swift */; };
 		B686C7F327C7387B00ECE445 /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B686C7F227C7387B00ECE445 /* Components.framework */; };
 		B686C7F427C7387B00ECE445 /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B686C7F227C7387B00ECE445 /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6ADAA4927D9A6E8005B866C /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADAA4827D9A6E8005B866C /* Closures.swift */; };
+		B6ADAA4B27D9ACAE005B866C /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADAA4A27D9ACAE005B866C /* NotificationCenter.swift */; };
 		B6D88BDC27BDF9EC00B9C984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D88BDB27BDF9EC00B9C984 /* AppDelegate.swift */; };
 		B6D88BE527BDF9ED00B9C984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6D88BE427BDF9ED00B9C984 /* Assets.xcassets */; };
 		B6D88BE827BDF9ED00B9C984 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D88BE627BDF9ED00B9C984 /* LaunchScreen.storyboard */; };
@@ -65,6 +67,8 @@
 		615D01198EEA812032D0DDB9 /* Pods-ExampleUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleUI.release.xcconfig"; path = "Target Support Files/Pods-ExampleUI/Pods-ExampleUI.release.xcconfig"; sourceTree = "<group>"; };
 		B66955C727D7019D004545E1 /* MainRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRealm.swift; sourceTree = "<group>"; };
 		B686C7F227C7387B00ECE445 /* Components.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Components.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6ADAA4827D9A6E8005B866C /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
+		B6ADAA4A27D9ACAE005B866C /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 		B6D88BD827BDF9EC00B9C984 /* ExampleUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D88BDB27BDF9EC00B9C984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6D88BE427BDF9ED00B9C984 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,6 +148,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B6ADAA4727D9A6DB005B866C /* Closures */ = {
+			isa = PBXGroup;
+			children = (
+				B6ADAA4827D9A6E8005B866C /* Closures.swift */,
+				B6ADAA4A27D9ACAE005B866C /* NotificationCenter.swift */,
+			);
+			path = Closures;
+			sourceTree = "<group>";
+		};
 		B6D88BCF27BDF9EC00B9C984 = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +182,7 @@
 		B6D88BDA27BDF9EC00B9C984 /* ExampleUI */ = {
 			isa = PBXGroup;
 			children = (
+				B6ADAA4727D9A6DB005B866C /* Closures */,
 				B6FCA27A27D06F8600AC9C5D /* DataPersistent */,
 				B6F6A64027C4907D00FCFCDB /* CollectionView */,
 				B6D88C1027BDFE0700B9C984 /* ViewWithCode */,
@@ -439,9 +453,11 @@
 				B6D88C1227BDFE3B00B9C984 /* ViewWithCodeViewController.swift in Sources */,
 				B6FCA28227D0772300AC9C5D /* CoreData.swift in Sources */,
 				B6F6A64A27C495A000FCFCDB /* TitleCollectionViewCell.swift in Sources */,
+				B6ADAA4B27D9ACAE005B866C /* NotificationCenter.swift in Sources */,
 				B6D88C0E27BDFC0E00B9C984 /* InitialViewController.swift in Sources */,
 				B6FCA27C27D06F9C00AC9C5D /* UserDefaults.swift in Sources */,
 				B6D88BDC27BDF9EC00B9C984 /* AppDelegate.swift in Sources */,
+				B6ADAA4927D9A6E8005B866C /* Closures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

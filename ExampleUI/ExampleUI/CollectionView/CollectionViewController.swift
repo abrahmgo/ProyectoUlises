@@ -8,7 +8,7 @@
 import UIKit
 
 class CollectionViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.dataSource = self
@@ -38,6 +38,7 @@ extension CollectionViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("toco alguna celda")
+        NotificationCenter.default.post(name: Notification.Name("toco celda"), object: nil)
         // logica para validar que celda toco? numero y seccion
         print(indexPath.row)
     }
