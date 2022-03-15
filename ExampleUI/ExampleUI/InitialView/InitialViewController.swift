@@ -33,6 +33,7 @@ class InitialViewController: UIViewController {
     @IBAction func goToSecondView(_ sender: Any) {
         let viewControllerWithCode = CollectionViewController(nibName: "CollectionViewController", bundle: nil)
         navigationController?.pushViewController(viewControllerWithCode, animated: true)
+        print("push")
     }
 }
 
