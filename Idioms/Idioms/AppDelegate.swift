@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  viperArch
+//  Idioms
 //
-//  Created by Andrés Bonilla Gómez on 19/04/22.
+//  Created by Andrés Bonilla Gómez on 20/04/22.
 //
 
 import UIKit
@@ -10,16 +10,16 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+
     var window: UIWindow?
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow()
-        let loginViewController = LoginFactory.buildLogin()
+        let loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
         window?.rootViewController = loginViewController
         window?.makeKeyAndVisible()
         
         return true
     }
 }
-
