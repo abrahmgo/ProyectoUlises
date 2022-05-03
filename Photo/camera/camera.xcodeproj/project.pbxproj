@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6F09D012820B913001DEC03 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F09D002820B913001DEC03 /* Filters.swift */; };
 		B6FD3D33281F94790028FC28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD3D32281F94790028FC28 /* AppDelegate.swift */; };
 		B6FD3D35281F94790028FC28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD3D34281F94790028FC28 /* SceneDelegate.swift */; };
 		B6FD3D37281F94790028FC28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD3D36281F94790028FC28 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B6F09D002820B913001DEC03 /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		B6FD3D2F281F94790028FC28 /* camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FD3D32281F94790028FC28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6FD3D34281F94790028FC28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				B6FD3D32281F94790028FC28 /* AppDelegate.swift */,
 				B6FD3D34281F94790028FC28 /* SceneDelegate.swift */,
+				B6F09D002820B913001DEC03 /* Filters.swift */,
 				B6FD3D36281F94790028FC28 /* ViewController.swift */,
 				B6FD3D38281F94790028FC28 /* Main.storyboard */,
 				B6FD3D3B281F947A0028FC28 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6FD3D37281F94790028FC28 /* ViewController.swift in Sources */,
+				B6F09D012820B913001DEC03 /* Filters.swift in Sources */,
 				B6FD3D33281F94790028FC28 /* AppDelegate.swift in Sources */,
 				B6FD3D35281F94790028FC28 /* SceneDelegate.swift in Sources */,
 			);
@@ -289,6 +293,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F37TC6TS67;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = camera/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -316,6 +321,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F37TC6TS67;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = camera/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

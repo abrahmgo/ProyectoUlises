@@ -9,8 +9,8 @@ import UIKit
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
-    
     @IBOutlet weak var imageView: UIImageView!
+    private var currentImage: UIImage?
     private let imagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -42,7 +42,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             print("No image found")
             return
         }
+        currentImage = image
         imageView.image = image
     }
+    
+    @IBAction func filterImage(_ sender: Any) {
+        let filter = FilterType.allCases.randomElement() ?? .mono
+        imageView.image = currentImage?.addFilter(filter: filter)
+    }
 }
-

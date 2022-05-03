@@ -20,8 +20,6 @@ class Location: NSObject, CLLocationManagerDelegate {
                     askPermission()
                 case .authorizedAlways, .authorizedWhenInUse:
                     startLocation()
-                @unknown default:
-                    break
             }
         } else {
             print("Location services are not enabled")
@@ -29,7 +27,7 @@ class Location: NSObject, CLLocationManagerDelegate {
     }
     
     func askPermission() {
-        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
     }
     
     func startLocation() {
@@ -37,15 +35,27 @@ class Location: NSObject, CLLocationManagerDelegate {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
+        } else {
+            print("Location services are not enabled")
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+    func locationManager(_ manager: CLLocationManager,
+                         didUpdateLocations locations: [CLLocation]) {
         coordinates = manager.location
     }
     
-    func fetchCityAndCountry(from location: CLLocation, completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
+        case .authorizedAlways, .authorizedWhenInUse:
+            startLocation()
+        default:
+            print("Location services are not enabled")
+        }
+    }
+    
+    func fetchCityAndCountry(from location: CLLocation,
+                             completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
         CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
             completion(placemarks?.first?.locality,
                        placemarks?.first?.country,

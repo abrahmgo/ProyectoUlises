@@ -13,21 +13,14 @@ class Biometrics {
     private var context = LAContext()
     
     func askPermission(completion: @escaping (_ status: Bool,
-                                             _ error: Error?) -> ()) {
+                                              _ error: Error?) -> ()) {
         var error: NSError?
 
         // Check for biometric authentication
         // permissions
-        let permissions = context.canEvaluatePolicy(
-            .deviceOwnerAuthentication,
-            error: &error
-        )
-
-        if permissions {
-            completion(true, nil)
-        } else {
-           completion(false, error)
-        }
+        let permissions = context.canEvaluatePolicy(.deviceOwnerAuthentication,
+                                                    error: &error)
+        completion(permissions, error)
     }
     
     
@@ -41,6 +34,7 @@ class Biometrics {
             localizedReason: reason
         ) { success, error in
             if success {
+                self.context = LAContext()
                 completion(success, nil)
             } else {
                 completion(false, error)

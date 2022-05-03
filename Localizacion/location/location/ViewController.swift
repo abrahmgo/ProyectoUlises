@@ -15,8 +15,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        location.checkPermission()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func permission(_ sender: Any) {
@@ -24,9 +22,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func coordinates(_ sender: Any) {
-        coordinates = location.coordinates
-        print(coordinates?.coordinate.latitude)
-        print(coordinates?.coordinate.longitude)
+        location.startLocation()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.coordinates = self.location.coordinates
+            print(self.coordinates?.coordinate.latitude)
+            print(self.coordinates?.coordinate.longitude)
+        }
     }
     
     @IBAction func city(_ sender: Any) {
