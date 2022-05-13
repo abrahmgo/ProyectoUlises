@@ -50,4 +50,27 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         let filter = FilterType.allCases.randomElement() ?? .mono
         imageView.image = currentImage?.addFilter(filter: filter)
     }
+    
+    @IBAction func saveImage(_ sender: Any) {
+        guard let image = currentImage,
+              let data = image.jpegData(compressionQuality: 1) else {
+            print("No tienes una imagen para guardar")
+            return
+        }
+        
+        RealmData.shared.delete()
+        
+        RealmData.shared.write(image: data)
+        print("Guardado exitoso")
+    }
+    
+    @IBAction func restoreImage(_ sender: Any) {
+        guard let imageData = RealmData.shared.read() else {
+            print("No hay imagen previamente guardada")
+            return
+        }
+        
+        print("Imagen restaurada con exito")
+        imageView.image = UIImage(data: imageData)
+    }
 }
